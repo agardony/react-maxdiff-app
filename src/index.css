@@ -1,0 +1,57 @@
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Import the Inter font for a more modern look */
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+#root {
+  min-height: 100%;
+  isolation: isolate;
+}
+
+/* Add a subtle background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.03) 1px, 
+    transparent 1px
+  );
+  background-size: 30px 30px;
+  pointer-events: none;
+  z-index: -1;
+}
